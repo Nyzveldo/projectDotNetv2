@@ -1,2 +1,22 @@
-﻿body {
+﻿*{
+    margin:0;
+    padding:0;
+}
+section{
+    background-image:url("Image/artistic-scenery-wallpapers-for-desktop-16.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    width:100vw;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.container{
+    width:47vw;
+    height:57vh;
+    background-image:url("Image/aeb85777178203a78ee9607a0c1ab9bf.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    position:relative;
 }
