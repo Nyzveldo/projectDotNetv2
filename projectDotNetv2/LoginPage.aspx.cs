@@ -31,6 +31,7 @@ namespace projectDotNetv2
                 cmd.ExecuteNonQuery();
                 if (dt.Rows[0][0].ToString() == "1")
                 {
+                    Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('Login Succesful');</script>");
                     Response.Write("alert('successful in login')");
                     Response.Redirect("Menu.aspx");
                 }
@@ -39,9 +40,10 @@ namespace projectDotNetv2
                     Response.Write("alert('error in login')");
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                Response.Write(ex.Message);
+                Response.Write("error in login");
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('Login Failed');</script>");
             }
         }
     }
