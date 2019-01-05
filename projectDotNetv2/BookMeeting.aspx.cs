@@ -1,4 +1,4 @@
-﻿using System;
+﻿.00.using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -19,7 +19,7 @@ namespace projectDotNetv2
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            con.ConnectionString= WebConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString;
+            con.ConnectionString= WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
             con.Open();
         }
 
@@ -62,7 +62,7 @@ namespace projectDotNetv2
             try
             {
                 SqlCommand cmd = new SqlCommand("INSERT INTO BookMeeting(LecturerName,DateTime,Description)VALUES(@LecturerName,@DateTime,@Description)", con);
-                cmd.Parameters.AddWithValue("@LecturerName", Label1);
+                cmd.Parameters.AddWithValue("@LecturerName", TextBox4);
                 cmd.Parameters.AddWithValue("@DateTime", TextBox2);
                 cmd.Parameters.AddWithValue("@Description", TextBox3);
                 cmd.ExecuteNonQuery();
@@ -84,12 +84,12 @@ namespace projectDotNetv2
 
         protected void Button3_Click(object sender, EventArgs e)
         {
-            string constr = WebConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString;
+            string constr = WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
             SqlConnection con = new SqlConnection(constr);
             try
             {
 
-                SqlCommand cmd = new SqlCommand("select* from data_table where lecturer='" + TextBox4.Text + "'", con);
+                SqlCommand cmd = new SqlCommand("select* from LecturerInfo where Lecturer_Name='" + TextBox4.Text + "'", con);
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
