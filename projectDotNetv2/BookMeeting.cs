@@ -12,9 +12,12 @@ namespace projectDotNetv2
     using System;
     using System.Collections.Generic;
     
-    public partial class data_table
+    public partial class BookMeeting
     {
-        public string lecturer { get; set; }
-        public int Lct_ID { get; set; }
+        public int Book_ID { get; set; }
+        public string LecturerName { get; set; }
+        public System.DateTime DateTime { get; set; }
+        public string Description { get; set; }
+        public int data_tableLct_ID { get; set; }
     }
 }

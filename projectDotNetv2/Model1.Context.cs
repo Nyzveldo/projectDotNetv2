@@ -27,5 +27,6 @@ namespace projectDotNetv2
     
         public virtual DbSet<data_table> data_table { get; set; }
         public virtual DbSet<LoginTable> LoginTables { get; set; }
+        public virtual DbSet<BookMeeting> BookMeetings { get; set; }
     }
 }
