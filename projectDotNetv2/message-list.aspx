@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         <div class="container">
-        <h1>Message List</h1>
+        <h1>Message List    </h1>
         <br />
         <table class="table">
             <tr>
@@ -13,7 +13,7 @@
                 <th>Message</th>
                 <th>Status</th>
             </tr>
-            <tr>
+            <tr>    
                 <td>1</td>
                 <td>Dr Noor Azah</td>
                 <td>Danial Wafiy</td>
