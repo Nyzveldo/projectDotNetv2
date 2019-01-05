@@ -61,7 +61,7 @@ namespace projectDotNetv2
         {
             try
             {
-                SqlCommand cmd = new SqlCommand("insert into BookMeeting"+"(LecturerName,DateTime,Description)values(@LecturerName,@DateTime,@Description)", con);
+                SqlCommand cmd = new SqlCommand("INSERT INTO BookMeeting(LecturerName,DateTime,Description)VALUES(@LecturerName,@DateTime,@Description)", con);
                 cmd.Parameters.AddWithValue("@LecturerName", Label1);
                 cmd.Parameters.AddWithValue("@DateTime", TextBox2);
                 cmd.Parameters.AddWithValue("@Description", TextBox3);
