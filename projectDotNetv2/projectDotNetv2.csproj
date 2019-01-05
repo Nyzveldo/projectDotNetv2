@@ -307,21 +307,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Database.mdf" />
     <Content Include="App_Data\Database1.mdf" />
     <Content Include="App_Data\Database1_log.ldf">
       <DependentUpon>Database1.mdf</DependentUpon>
-    </Content>
-    <Content Include="App_Data\Database2.mdf" />
-    <Content Include="App_Data\Database2_log.ldf">
-      <DependentUpon>Database2.mdf</DependentUpon>
-    </Content>
-    <Content Include="App_Data\DatabaseSuthanon.mdf" />
-    <Content Include="App_Data\DatabaseSuthanon_log.ldf">
-      <DependentUpon>DatabaseSuthanon.mdf</DependentUpon>
-    </Content>
-    <Content Include="App_Data\Database_log.ldf">
-      <DependentUpon>Database.mdf</DependentUpon>
     </Content>
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="BookMeeting.aspx" />
