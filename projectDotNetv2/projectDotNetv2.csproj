@@ -332,10 +332,15 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Images\office-background-hd-10.jpg" />
+    <Content Include="Images\videoblocks-business-man-working-and-writing-in-laptop-on-office-desk-background-hands-top-view-slow-motion-red-epic_sug-kvxlhe_thumbnail-full01.png" />
+    <Content Include="Image\office-background-hd-10.jpg" />
+    <Content Include="Image\videoblocks-business-man-working-and-writing-in-laptop-on-office-desk-background-hands-top-view-slow-motion-red-epic_sug-kvxlhe_thumbnail-full01.png" />
     <Content Include="LoginPage.aspx" />
     <Content Include="meeting-status-lect.aspx" />
     <Content Include="meeting-status-std.aspx" />
     <Content Include="Menu.aspx" />
+    <Content Include="Registration.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
@@ -386,9 +391,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Images\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
   </ItemGroup>
