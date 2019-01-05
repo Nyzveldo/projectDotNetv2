@@ -12,12 +12,20 @@
 
         .auto-style3 {
             font-size: xx-large;
+            color:dimgray;
         }
         .auto-style1 {
             width: 85px;
+
         }
         .auto-style2 {
             width: 317px;
+            border-color:aliceblue;
+            
+        }
+        .auto-style22 {
+            width: 317px;
+            
         }
         </style>
 </head>
@@ -48,7 +56,7 @@
             </tr>
             <tr>
                 <td class="auto-style1">&nbsp;</td>
-                <td class="auto-style2">
+                <td class="auto-style22">
                     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Login" Width="131px" />
                 </td>
                 <td>&nbsp;</td>
