@@ -34,6 +34,7 @@ namespace projectDotNetv2
                 cmd.ExecuteNonQuery();
 
                 Label1.Visible = true;
+
             }
             catch(Exception)
             {
