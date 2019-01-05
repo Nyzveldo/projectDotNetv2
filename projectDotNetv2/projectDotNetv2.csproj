@@ -238,12 +238,19 @@
     <Compile Include="masterPage.Master.designer.cs">
       <DependentUpon>masterPage.Master</DependentUpon>
     </Compile>
-    <Compile Include="MeetingStatus.aspx.cs">
-      <DependentUpon>MeetingStatus.aspx</DependentUpon>
+    <Compile Include="meeting-status-lect.aspx.cs">
+      <DependentUpon>meeting-status-lect.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MeetingStatus.aspx.designer.cs">
-      <DependentUpon>MeetingStatus.aspx</DependentUpon>
+    <Compile Include="meeting-status-lect.aspx.designer.cs">
+      <DependentUpon>meeting-status-lect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="meeting-status-std.aspx.cs">
+      <DependentUpon>meeting-status-std.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="meeting-status-std.aspx.designer.cs">
+      <DependentUpon>meeting-status-std.aspx</DependentUpon>
     </Compile>
     <Compile Include="Menu.aspx.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
@@ -252,12 +259,19 @@
     <Compile Include="Menu.aspx.designer.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MessageSection.aspx.cs">
-      <DependentUpon>MessageSection.aspx</DependentUpon>
+    <Compile Include="message.aspx.cs">
+      <DependentUpon>message.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MessageSection.aspx.designer.cs">
-      <DependentUpon>MessageSection.aspx</DependentUpon>
+    <Compile Include="message.aspx.designer.cs">
+      <DependentUpon>message.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="message-list.aspx.cs">
+      <DependentUpon>message-list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="message-list.aspx.designer.cs">
+      <DependentUpon>message-list.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -282,9 +296,11 @@
     <Content Include="Global.asax" />
     <Content Include="Homepage.aspx" />
     <Content Include="LoginPage.aspx" />
-    <Content Include="MeetingStatus.aspx" />
+    <Content Include="meeting-status-lect.aspx" />
+    <Content Include="meeting-status-std.aspx" />
     <Content Include="Menu.aspx" />
-    <Content Include="MessageSection.aspx" />
+    <Content Include="message.aspx" />
+    <Content Include="message-list.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
