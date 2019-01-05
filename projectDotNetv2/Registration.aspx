@@ -36,6 +36,9 @@
                    <br />
                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" Font-Size="Medium" ForeColor="Red" Display="Dynamic" ControlToValidate="txtemail" ErrorMessage="Please Enter Email"></asp:RequiredFieldValidator>
 
+                   <asp:TextBox ID="txtphonenum" placeholder="Phonenum" runat="server"></asp:TextBox>
+                   <br />
+                   <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" Font-Size="Medium" ForeColor="Red" Display="Dynamic" ControlToValidate="txtphonenum" ErrorMessage="Please Enter Phone Number"></asp:RequiredFieldValidator>
 
                    <asp:TextBox ID="txtpasswd" placeholder="Password" TextMode="Password" runat="server"></asp:TextBox>
                    <br />
@@ -55,6 +58,6 @@
            </div>
        </section>
     </form>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [regi]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [SQLQuery1]"></asp:SqlDataSource>
 </body>
 </html>
