@@ -24,12 +24,13 @@ namespace projectDotNetv2
             try
             {
                 con.Open();
-                string command = "INSERT INTO regi(urname,email,passwd) VALUES(@urname,@email,@passwd)";
+                string command = "INSERT INTO SQLQuery1(urname,email,phonenum,passwd) VALUES(@urname,@email,@phonenum,@passwd)";
                 SqlCommand cmd = new SqlCommand(command, con);
 
                 cmd.Parameters.AddWithValue("@urname", txturname.Text);
                 cmd.Parameters.AddWithValue("@email", txtemail.Text);
                 cmd.Parameters.AddWithValue("@passwd", txtpasswd.Text);
+                cmd.Parameters.AddWithValue("@phonenum", txtphonenum.Text);
 
                 cmd.ExecuteNonQuery();
 
@@ -39,7 +40,7 @@ namespace projectDotNetv2
             catch(Exception)
             {
                 Label1.Text = "Something Goes Wrong.";
-                throw;
+                
             }
             finally
             {
