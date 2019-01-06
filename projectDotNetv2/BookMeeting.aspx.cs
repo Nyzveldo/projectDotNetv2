@@ -1,4 +1,4 @@
-﻿.00.using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -61,7 +61,7 @@ namespace projectDotNetv2
         {
             try
             {
-                SqlCommand cmd = new SqlCommand("INSERT INTO BookMeeting(LecturerName,DateTime,Description)VALUES(@LecturerName,@DateTime,@Description)", con);
+                SqlCommand cmd = new SqlCommand("INSERT INTO BookMeeting(LecturerName,DateTime,Description) VALUES(@LecturerName,@DateTime,@Description)", con);
                 cmd.Parameters.AddWithValue("@LecturerName", TextBox4);
                 cmd.Parameters.AddWithValue("@DateTime", TextBox2);
                 cmd.Parameters.AddWithValue("@Description", TextBox3);
