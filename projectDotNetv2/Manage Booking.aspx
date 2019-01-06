@@ -23,7 +23,7 @@
                
                 <AlternatingRowStyle BackColor="#DCDCDC" />
                 <Columns>
-            <asp:BoundField DataField="Student" HeaderText="Lecturer" />
+            <asp:BoundField DataField="Student" HeaderText="Student" />
             <asp:BoundField DataField="DateTime" HeaderText="Date and Time" />
             <asp:BoundField DataField="Description" HeaderText="Description" />
             <asp:BoundField DataField="Status" HeaderText="Status" />
@@ -31,7 +31,7 @@
 
                     <asp:TemplateField>
                        <ItemTemplate>
-                           <asp:LinkButton ID="linkaccept" runat="server" CommandName="Accept" CommandArgument='<%# Eval("meetingID") %>' > Accept</asp:LinkButton>
+                           <asp:LinkButton ID="linkaccept" runat="server" CommandName="Accept" CommandArgument='<% #Eval("meetingID") %>' > Accept</asp:LinkButton>
                            <asp:LinkButton ID="LinkDecline" runat="server" CommandArgument="<% Decline('MeetingID' %>"> Decline</asp:LinkButton>
                        </ItemTemplate>
 
