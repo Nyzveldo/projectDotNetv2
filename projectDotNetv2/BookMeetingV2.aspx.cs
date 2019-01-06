@@ -8,22 +8,43 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Web.Configuration;
 
-
 namespace projectDotNetv2
 {
     public partial class BookMeetingV2 : System.Web.UI.Page
     {
+
         SqlCommand cmd = new SqlCommand();
         SqlConnection con = new SqlConnection();
 
+
         protected void Page_Load(object sender, EventArgs e)
+        {
+            con.ConnectionString = WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+            con.Open();
+        }
+
+        /*protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
             con.ConnectionString = WebConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString;
             con.Open();
-            
+            SqlCommand cmd = new SqlCommand("select* from data_table where lecturer='" + TextBox4.Text + "'", con);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            cmd.ExecuteNonQuery();
+            if (dt.Rows[0][0].ToString() == "1")
+            {
 
-            con.Close();
-        }
+                SqlCommand cmd = new SqlCommand("insert into BookMeeting" + "(LecturerName)values(@LecturerName)", con);
+                cmd.Parameters.AddWithValue("@LecturerName", Label1);
+
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('Login Succesful');</script>");
+                Response.Write("alert('successful in login')");
+                Response.Redirect("Menu.aspx");
+            }
+
+
+        }*/
 
         protected void Button1_Click(object sender, EventArgs e)
         {
@@ -38,12 +59,9 @@ namespace projectDotNetv2
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            con.ConnectionString = WebConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString;
-            con.Open();
-            SqlCommand cmd = new SqlCommand("insert into BookMeeting" + "(DateTime,Description)values(@LecturerName,@DateTime,@Description)", con);
             try
             {
-                
+                SqlCommand cmd = new SqlCommand("INSERT INTO BookMeeting(LecturerName,DateTime,Description) VALUES(@LecturerName,@DateTime,@Description)", con);
                 cmd.Parameters.AddWithValue("@LecturerName", TextBox4);
                 cmd.Parameters.AddWithValue("@DateTime", TextBox2);
                 cmd.Parameters.AddWithValue("@Description", TextBox3);
@@ -60,24 +78,19 @@ namespace projectDotNetv2
             }
         }
 
-        protected void TextBox2_TextChanged(object sender, EventArgs e)
+        /*protected void DropDownList1_SelectedIndexChanged1(object sender, EventArgs e)
         {
-           
-        }
+            Label1.Text = DropDownList1.Text;
+        } */
 
-        /*protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        protected void Button3_Click(object sender, EventArgs e)
         {
-            Label1.Text = DropDownList1.SelectedValue;
-        }*/
-
-        /*protected void Button3_Click(object sender, EventArgs e)
-        {
-            string constr = WebConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString;
+            string constr = WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
             SqlConnection con = new SqlConnection(constr);
             try
             {
 
-                SqlCommand cmd = new SqlCommand("select* from data_table where lecturer='" + TextBox4.Text + "'", con);
+                SqlCommand cmd = new SqlCommand("select* from LecturerInfo where Lect_Name='" + TextBox4.Text + "'", con);
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
@@ -98,6 +111,9 @@ namespace projectDotNetv2
 
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('Lecturer Not Found');</script>");
             }
-        }*/
+
+        }
+
+        
     }
 }

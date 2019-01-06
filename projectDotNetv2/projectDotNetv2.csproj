@@ -222,6 +222,13 @@
     <Compile Include="BookMeeting.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="BookMeetingV2.aspx.cs">
+      <DependentUpon>BookMeetingV2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BookMeetingV2.aspx.designer.cs">
+      <DependentUpon>BookMeetingV2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
@@ -310,6 +317,7 @@
     </Content>
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="BookMeeting.aspx" />
+    <Content Include="BookMeetingV2.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />

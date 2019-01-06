@@ -12,6 +12,8 @@
                     <td>
                         <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
                         
+                        <asp:Button ID="Button3" runat="server" Text="Search" OnClick="Button3_Click" />
+                        
                         <br />
                         
                     </td>
@@ -28,7 +30,7 @@
                     <td class="auto-style3">Date and Time:</td>
                     <td>
                         <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-                        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
+                        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Select date" />
                         <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="180px" OnSelectionChanged="Calendar1_SelectionChanged" Visible="False" Width="200px">
                             <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" />
                             <NextPrevStyle VerticalAlign="Bottom" />
