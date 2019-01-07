@@ -13,6 +13,7 @@ namespace projectDotNetv2
 {
     public partial class WebForm3 : System.Web.UI.Page
     {
+        int no=0;
         string mainconn = ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -125,37 +126,56 @@ namespace projectDotNetv2
             using (SqlConnection sqlCon = new SqlConnection(mainconn))
             {
                 sqlCon.Open();
-                string sqlquery = "select meetingID,Student,DateTime,Description,Status from [dbo].[BookMeeting]";
-                SqlDataAdapter sda = new SqlDataAdapter(sqlquery,sqlCon);
-                sda.Fill(dt);
+                string sqlquery = "select Student,DateTime,Description,Status,Lecturer from [dbo].[BookMeeting]";
+                SqlCommand sqlcomm = new SqlCommand(sqlquery, sqlCon);
+               sqlcomm.CommandType = CommandType.Text;
+               sqlcomm.ExecuteNonQuery();
 
-                
-                
-            }
-            if (dt.Rows.Count > 0)
-            {
+                SqlDataAdapter sda = new SqlDataAdapter(sqlcomm);
+                sda.Fill(dt);
                 GridView1.DataSource = dt;
                 GridView1.DataBind();
+
+                /* if (dt.Rows.Count < 0)
+                 {
+                     dt.Rows.Add(dt.NewRow());
+                     GridView1.DataSource = dt;
+                     GridView1.DataBind();
+                     GridView1.Rows[0].Cells.Clear();
+                     GridView1.Rows[0].Cells.Add(new TableCell());
+                     GridView1.Rows[0].Cells[0].ColumnSpan = dt.Columns.Count;
+                     GridView1.Rows[0].Cells[0].Text = "No Meeting Found";
+                     GridView1.Rows[0].Cells[0].HorizontalAlign = HorizontalAlign.Center;
+                 }*/
             }
-            else
-            {
-                dt.Rows.Add(dt.NewRow());
-                GridView1.DataSource = dt;
-                GridView1.DataBind();
-                GridView1.Rows[0].Cells.Clear();
-                GridView1.Rows[0].Cells.Add(new TableCell());
-                GridView1.Rows[0].Cells[0].ColumnSpan = dt.Columns.Count;
-                GridView1.Rows[0].Cells[0].Text = "No Meeting Found";
-                GridView1.Rows[0].Cells[0].HorizontalAlign = HorizontalAlign.Center;
-            }
-            }
+        }
 
         protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             if (e.CommandName == "Accept")
             {
-                int index = Convert.ToInt32(e.CommandArgument);
-                
+                string accept = "Accepted";
+                //GridViewRow row = GridView1.Rows[Convert.ToInt32(e.CommandArgument)];
+                //GridView gv = (GridView)(e.CommandSource);
+                //string s = gv.DataKeys[row.RowIndex][0].ToString();
+                using (SqlConnection sqlCon = new SqlConnection(mainconn))
+                {
+                    sqlCon.Open();
+                    string sqlquery = "UPDATE BookMeeting SET Status='"+accept+"WHERE meetingID=" + s + "')";
+
+                    SqlCommand sqlcomm = new SqlCommand(sqlquery, sqlCon);
+                    sqlcomm.CommandType = CommandType.Text;
+                    sqlcomm.Parameters.AddWithValue("@meetingID", s);
+                    sqlcomm.ExecuteNonQuery();
+
+                    SqlDataAdapter sda = new SqlDataAdapter(sqlcomm);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+                    GridView1.DataSource = dt;
+                    GridView1.DataBind();
+                }
+                //int index = Convert.ToInt32(e.CommandArgument);
+
                 //GridViewRow selectedrow = GridView1.Rows[index];
                 //selectedrow.Cells[4].Text = "Accepted";
 
@@ -177,9 +197,9 @@ namespace projectDotNetv2
                     lblSuccessMessage.Text = "The meeting is accepted";
 
                 }
-
-            }
-        }*/
+                using (SqlConnection sqlCon = new SqlConnection(mainconn))
+           */
+        }
 
 
     }

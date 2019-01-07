@@ -19,7 +19,7 @@
     <h3 style="text-align:center">Manage Booking</h3>
     <form id="form1" runat="server" >
         <div >
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" align="center" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" OnRowCommand="GridView1_RowCommand">
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" align="center" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" OnRowCommand="GridView1_RowCommand" DataKeyNames="meetingID">
                
                 <AlternatingRowStyle BackColor="#DCDCDC" />
                 <Columns>
@@ -31,7 +31,7 @@
 
                     <asp:TemplateField>
                        <ItemTemplate>
-                           <asp:LinkButton ID="linkaccept" runat="server" CommandName="Accept" CommandArgument='<% #Eval("meetingID") %>' > Accept</asp:LinkButton>
+                           <asp:LinkButton ID="linkaccept" runat="server" CommandName="Accept" > Accept</asp:LinkButton>
                            <asp:LinkButton ID="LinkDecline" runat="server" CommandArgument="<% Decline('MeetingID' %>"> Decline</asp:LinkButton>
                        </ItemTemplate>
 
