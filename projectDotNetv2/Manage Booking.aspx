@@ -19,7 +19,7 @@
     <h3 style="text-align:center">Manage Booking</h3>
     <form id="form1" runat="server" >
         <div >
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" align="center" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" OnRowCommand="GridView1_RowCommand" DataKeyNames="meetingID">
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" align="center" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" >
                
                 <AlternatingRowStyle BackColor="#DCDCDC" />
                 <Columns>
