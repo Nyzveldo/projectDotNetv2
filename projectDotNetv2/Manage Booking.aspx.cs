@@ -154,7 +154,7 @@ namespace projectDotNetv2
         {
             if (e.CommandName == "Accept")
             {
-                string accept = "Accepted";
+                string accept ="accepted";
                 //GridViewRow row = GridView1.Rows[Convert.ToInt32(e.CommandArgument)];
                 //GridView gv = (GridView)(e.CommandSource);
                 //string s = gv.DataKeys[row.RowIndex][0].ToString();
