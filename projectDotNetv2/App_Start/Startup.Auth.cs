@@ -59,11 +59,11 @@ namespace projectDotNetv2
             //    appId: "",
             //    appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "139814011855-dri3tpv870dg5ms08ppruc8n3lsep6di.apps.googleusercontent.com",
+               ClientSecret = "0ILQXQxhYsSVEShY494UcWcS"
+            });
         }
     }
 }

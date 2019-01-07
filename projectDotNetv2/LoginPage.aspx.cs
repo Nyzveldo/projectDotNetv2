@@ -19,12 +19,12 @@ namespace projectDotNetv2
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            string constr = WebConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString;
+            string constr = WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
             SqlConnection con = new SqlConnection(constr);
             try
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("select* from LoginTable where username='" + TextBox1.Text + "' and password ='" + TextBox2.Text + "' ", con);
+                SqlCommand cmd = new SqlCommand("select* from SQLQuery1 where urname='" + TextBox1.Text + "' and passwd ='" + TextBox2.Text + "' ", con);
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
@@ -45,6 +45,11 @@ namespace projectDotNetv2
                 Response.Write("error in login");
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('Login Failed');</script>");
             }
+        }
+
+        protected void ButtonGoogeLogin_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

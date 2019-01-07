@@ -61,8 +61,24 @@
                 </td>
                 <td>&nbsp;</td>
             </tr>
+            <tr>
+                <td class="auto-style1">&nbsp;</td>
+                <td class="auto-style22">
+                    <asp:Button ID="ButtonGoogeLogin" runat="server" Text="Login with Google" Width="131px" OnClick="ButtonGoogeLogin_Click" />
+                </td>
+                <td>&nbsp;</td>
+            </tr>
         </table>
             </div>
+            <script src="Scripts/jquery-3.3.1.min.js">
+
+                $('#ButtonGoogeLogin').click(function (){
+                window.location.href = "";
+            });
+
+            </script>
+
+            
       
             </section>
     </form>

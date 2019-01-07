@@ -212,16 +212,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\XDocument.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
-    <Compile Include="BookMeeting.aspx.cs">
-      <DependentUpon>BookMeeting.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="BookMeeting.aspx.designer.cs">
-      <DependentUpon>BookMeeting.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="BookMeeting.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
+    <Compile Include="BookMeeting.cs" />
     <Compile Include="BookMeetingV2.aspx.cs">
       <DependentUpon>BookMeetingV2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -316,7 +307,6 @@
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
     <Content Include="Areas\HelpPage\HelpPage.css" />
-    <Content Include="BookMeeting.aspx" />
     <Content Include="BookMeetingV2.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
